@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\CopyLinuxPath]
+@="Copy Linux Path"
+
+[HKEY_CLASSES_ROOT\*\shell\CopyLinuxPath\command]
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"$Path = '%1'; $convertedPath = $Path -replace '\\', '/'; $convertedPath | Set-Clipboard\""
+
+[HKEY_CLASSES_ROOT\*\shell\CopyWindowsPath]
+@="Copy Windows Path"
+
+[HKEY_CLASSES_ROOT\*\shell\CopyWindowsPath\command]
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"$Path = '%1'; $convertedPath = $Path -replace '/', '\\'; $convertedPath | Set-Clipboard\""

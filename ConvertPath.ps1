@@ -9,4 +9,4 @@ if ($ToUnix) {
     $convertedPath = $Path -replace '/', '\\'
 }
 
-Write-Output $convertedPath
+$convertedPath | Set-Clipboard

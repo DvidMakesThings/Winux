@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic]
+@="Winux"
+"Icon"="C:\Winux\\Winux.png"
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic\shell\CopyLinuxPath]
+@="Copy Linux Path"
+"Icon"="C:\Winux\\Winux.png"
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic\shell\CopyLinuxPath\command]
+@="powershell.exe -NoExit -File \"C:\Winux\\ConvertPath.ps1\" -Path \"%1\" -ToUnix"
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic\shell\CopyWindowsPath]
+@="Copy Windows Path"
+"Icon"="C:\Winux\\Winux.png"
+
+[HKEY_CLASSES_ROOT\*\shell\DoTheMagic\shell\CopyWindowsPath\command]
+@="powershell.exe -NoExit -File \"C:\Winux\\ConvertPath.ps1\" -Path \"%1\""

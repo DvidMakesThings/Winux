@@ -4,10 +4,10 @@ Windows Registry Editor Version 5.00
 @="Copy Linux Path"
 
 [HKEY_CLASSES_ROOT\*\shell\CopyLinuxPath\command]
-@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"$Path = '%1'; $convertedPath = $Path -replace '\\', '/'; $convertedPath | Set-Clipboard\""
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"& {Start-Process powershell -ArgumentList '-NoProfile -WindowStyle Hidden -File \"C:\\Winux\\ConvertPath.ps1\" -Path \"%1\" -ToUnix' -NoNewWindow}\""
 
 [HKEY_CLASSES_ROOT\*\shell\CopyWindowsPath]
 @="Copy Windows Path"
 
 [HKEY_CLASSES_ROOT\*\shell\CopyWindowsPath\command]
-@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"$Path = '%1'; $convertedPath = $Path -replace '/', '\\'; $convertedPath | Set-Clipboard\""
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"& {Start-Process powershell -ArgumentList '-NoProfile -WindowStyle Hidden -File \"C:\\Winux\\ConvertPath.ps1\" -Path \"%1\"' -NoNewWindow}\""
